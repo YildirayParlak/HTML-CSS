@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: green;
+    }
+    .container {
+      background-color: white;
+    }
+    .resim {
+      margin-top: 20px;
+      margin-left: 300px;
+      margin-bottom: 20px;
+    }
+    
+  </style>
+
+</head>
+<body>
+
+<div class="container" style="margin-top: 50px;">
+  
+  <img src="Images/article-image-2.jpg" alt="" class="resim">
+    <div class="form-group" style="padding-left: 15px;">
+      
+      <input type="email" class="form-control" id="uname" placeholder="Mail Adresiniz" name="uname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group" style="padding-left: 15px;">
+      
+      <input type="password" class="form-control" id="pwd" placeholder="Şifre Gir" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group form-check" style="padding-left: 15px;">
+      <label class="form-check-label" style="padding-left: 15px;">
+        <input class="form-check-input renk" type="checkbox" name="remember" required> Beni hatırla
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Check this checkbox to continue.</div>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary" style="padding-left: 20px;">giris yap</button>
+    <br><br>
+    <a href="">sifreni unuttunmu</a>
+  </form>
+</div>
+
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

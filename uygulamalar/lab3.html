@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LAB 3</title>
+    <style>
+      .header {
+        background-color: aquamarine;
+        text-align: center;
+        padding: 5px;
+        border: 1px solid blue;
+      }
+      .nav {
+        background-color: antiquewhite;
+        height: auto;
+        padding: 5px;
+        border: 1px solid blue;
+      }
+      .nav ul li {
+        display: inline;
+        margin: 5px;
+        padding: 5px 10px;
+        background-color: #2196f2;
+      }
+      .section {
+        background-color: blueviolet;
+        width: 68%;
+        float: left;
+        padding: 16px;
+        margin: 16px;
+      }
+      .article {
+        background-color: chartreuse;
+        float: left;
+        width: 45%;
+        padding: 10px;
+        border: 1px solid blue;
+        height: 100px;
+        clear: left;
+      }
+
+      .article1 {
+        background-color: chartreuse;
+        float: left;
+        width: 45%;
+        padding: 10px;
+        border: 1px solid blue;
+        height: 100px;
+        margin-left: 10px;
+      }
+
+      .article3 {
+        background-color: chartreuse;
+        float: left;
+        width: 45%;
+        padding: 10px;
+        border: 1px solid blue;
+        height: 100px;
+        margin-left: 10px;
+        overflow: scroll;
+      }
+      .aside {
+        background-color: pink;
+        width: 10%;
+        float: right;
+        padding: 10px;
+        border: 1px solid blue;
+        margin: 15px;
+        height: 250px;
+      }
+      .aside1 {
+        background-color: pink;
+        width: 10%;
+        float: left;
+        padding: 10px;
+        border: 1px solid blue;
+        margin: 15px;
+        height: 250px;
+      }
+      .footer {
+        background-color: crimson;
+        clear: both;
+        text-align: center;
+        padding: 5px;
+        font-size: 0.5cm;
+        border: 1px solid blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <h2>Makaleler</h2>
+    </div>
+    <div class="nav">
+      <h1 style="text-align: center">Menü Burası</h1>
+      <ul>
+        <li>anasayfa</li>
+        <li>menü</li>
+        <li>hakkımızda</li>
+      </ul>
+      
+      <!-- Anasayfa Hakk�m�zda �leti�im olacak �ekilde bir tablo olu�turulacak -->
+    </div>
+    <div>
+      <div class="aside1">
+        <h3>Reklam Alani</h3>
+        <a href="http://www.w3schools.com/">
+            <abbr title="w3schools Web sayfası"><img width="120px" height="auto" src="w3schools.jpg"/></abbr> 
+            </a>
+      </div>
+      <div class="section">
+        <!-- 4 makale olacak �ekilde divler ile lab dok�man�nda istenen �ekli olu�turun -->
+        <div class="article1">Makale 1</div>
+        <div class="article1">Makale 2</div>
+        <div class="article1">Makale 3</div>
+        <div class="article3">
+          <div class="scroll">
+            <p>Makale 4</p>
+            <p>
+              <span style="color: darkturquoise"
+                >Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam ab, amet saepe sed voluptate quos nihil libero ad!
+                Voluptates debitis aperiam similique reprehenderit id nobis
+                sapiente nemo aspernatur ea dignissimos.</span
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="aside">
+        <h3>Reklam Alani</h3>
+        <a href="http://www.w3schools.com/">
+            <abbr title="w3schools Web sayfası"><img width="120px" height="auto" src="w3schools.jpg"/></abbr> 
+            
+            </a>
+        </a>
+      </div>
+    </div>
+    <div class="footer">
+      <h3>KLU Yazilim Muhendisligi 2023</h3>
+    </div>
+  </body>
+</html>

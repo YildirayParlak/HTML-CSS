@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>En Büyük Palindrom</title>
+</head>
+<body>
+
+<h2>En Büyük Palindrom</h2>
+
+<script>
+function PalindromMu(num) {
+  var strNum = num.toString();
+  return strNum == strNum.split('').reverse().join('');
+}
+
+function BulEnBuyukPalindrom() {
+  let EnBuyukPalindrom = 0;
+
+  for (let i = 99; i >= 10; i--) {
+    for (let j = 99; j >= 10; j--) {
+      var sonuc= i * j;
+      if (PalindromMu(sonuc) && sonuc> EnBuyukPalindrom) {
+        EnBuyukPalindrom = sonuc;
+      }
+    }
+  }
+
+  document.write("2 basamaklı 2 pozitif tamsayının çarpımıyla elde edilebilecek en büyük palindrom sayı: " + EnBuyukPalindrom);
+}
+
+BulEnBuyukPalindrom();
+</script>
+
+</body>
+</html>

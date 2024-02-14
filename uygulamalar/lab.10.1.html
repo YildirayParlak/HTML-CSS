@@ -1,0 +1,98 @@
+<!doctype html>
+<html><head>
+	<meta charset="utf8">
+    <style>
+    h1 {
+        color: #1abc9c;
+    }
+    .rem {
+        margin-left: 5px;
+        background-color: white;
+        color: red;
+        border: none;
+        cursor: pointer;
+    }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+    $(function() {
+        $("#add").on("click", function() {
+        var val = $("input").val();//kullanıcının gridiği metin val değişkenine atarız
+        if(val !== '') {
+            var todo = $("<li></li>").text(val);//girilen metni içeren bir liste olustururuz
+            $(todo).append("<button class='rem'>X</button>");//olusturulan listenin içeriğinini aynıan gelen carpı işareti silmekiçin
+            $("#mylist").append(todo);
+            $("input").val("");//bir deger girdiketen onsra otomatik giriş alanın silinir
+            $(".rem").on("click", function() { 
+                todo.remove();
+                //metnin yanında buluna carpı isşretine tıklayınca silme işlemini gerceklestirecek fonk
+            });
+        }
+        });
+    });
+    </script>
+</head>
+<body>
+    <h1>Yapılacak Listesi</h1>
+    <input type="text" placeholder="Yeni Madde" />
+    <button id="add">Ekle</button>
+    <hr>
+    <ol id="mylist"></ol>
+</body></html>
+
+
+<!-- ? asagıda yukarıdaki kodun js ile yapılmıs ile hali var
+-->
+<!--!
+
+    <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        h1 {
+            color: #1abc9c;
+        }
+        .rem {
+            margin-left: 5px;
+            background-color: white;
+            color: red;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("add").addEventListener("click", function() {
+                var val = document.querySelector("input").value;
+
+                if (val !== '') {
+                    var elem = document.createElement("li");
+                    elem.textContent = val;
+
+                    var button = document.createElement("button");
+                    button.className = "rem";
+                    button.textContent = "X";
+
+                    button.addEventListener("click", function() {
+                        elem.remove();
+                    });
+
+                    elem.appendChild(button);
+
+                    document.getElementById("mylist").appendChild(elem);
+                    document.querySelector("input").value = "";
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Yapılacak Listesi</h1>
+    <input type="text" placeholder="Yeni Madde" />
+    <button id="add">Ekle</button>
+    <hr>
+    <ol id="mylist"></ol>
+</body>
+</html>
+ -->

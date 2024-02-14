@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grid</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Style the body */
+      body {
+        font-family: Arial;
+        margin: 0;
+      }
+ 
+      /* Style the top navigation bar */
+      .navbar {
+        width: 100%;
+        background-color: #333;
+      }
+      .navbar ul {
+        margin: 0;
+        padding: 0;
+      }
+ 
+      /* Style the navigation bar links */
+      .navbar ul li {
+        background-color: #333;
+        display: inline-block;
+        list-style: none;
+        padding: 14px 20px;
+        text-align: center;
+      }
+      .navbar ul li a {
+        color: white;
+        padding: 14px 20px;
+        text-decoration: none;
+        text-align: center;
+      }
+ 
+      .navbar a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+ 
+      .row {
+        clear: both;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      /* Boşlukları doldurun */
+      .side {
+        color: azure;
+        float: left;
+        background-color: darkred;
+        padding: 20px;
+      }
+      
+      /* Main column */
+      .main {
+        float: left;
+        background-color: #fff;
+        padding: 20px;
+      }
+ 
+      /* Fake image, just for this example */
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      .col-2 {
+        width: 16.6%;
+      }
+      .col-3 {
+        width: 25%;
+      }
+      .col-4 {
+        width: 33.3%;
+      }
+      .col-8 {
+        width: 66.6%;
+      }
+      .col-9 {
+        width: 75%;
+      }
+      .col-12 {
+        width: 100%;
+      }
+ 
+      /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .col-2 {
+          width: 100%;
+        }
+        .col-3 {
+          width: 100%;
+        }
+        .col-4 {
+          width: 100%;
+        }
+        .col-8 {
+          width: 100%;
+        }
+        .col-9 {
+          width: 100%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+        .navbar ul li {
+          display: block;
+        }
+      }
+      @media screen and (min-width: 600px) and (max-width: 960px) {
+        .col-2 {
+          width: 100%;
+        }
+        .col-3 {
+          width: 100%;
+        }
+        .col-4 {
+          width: 100%;
+        }
+        .col-8 {
+          width: 100%;
+        }
+        .col-9 {
+          width: 100%;
+        }
+        .col-12 {
+          width: 100%;
+        }
+        .col-4 {
+          width: 100%;
+        }
+        .col-8 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar oluşturun -->
+    <div class="navbar col-12">
+      <div class="navbar">
+        <ul>
+          <li><a href="https://www.klu.edu.tr/" target="_blank">Link1</a></li>
+          <li><a href="https://www.klu.edu.tr/" target="_blank">Link2</a></li>
+          <li><a href="https://www.klu.edu.tr/" target="_blank">Link3</a></li>
+          <li><a href="https://www.klu.edu.tr/" target="_blank">link4</a></li>
+        </ul>
+      </div>
+    </div>
+ 
+    <!-- Ana kısmı oluşturun -->
+    <div class="row col-12">
+      <div class="side col-3">
+        <h2>Hakkımda</h2>
+        <div class="fakeimg" style="height: 240px"></div>
+        <p>Hakkimda bazi temel bilgiler</p>
+        <h3>More Text</h3>
+        <p>Lorem, ipsum dolor.</p>
+        <div class="fakeimg" style="margin-top: 20px">Image</div>
+        <div class="fakeimg" style="margin-top: 20px">Image</div>
+        <div class="fakeimg" style="margin-top: 20px">Image</div>
+      </div>
+      <div class="main col-9">
+        <strong>CALISTIGIM YERLER</strong>
+        <div class="fakeimg" style="height: 240px">image</div>
+        <p>icerik</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
+          quam eligendi ratione similique obcaecati autem esse accusantium
+          quidem sapiente inventore.
+        </p>
+        <strong>EGITIMIM</strong>
+        <div class="fakeimg" style="height: 240px">Image</div>
+        <p>Icerik</p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, vitae!
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

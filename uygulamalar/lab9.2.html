@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .row1,.row2,.row3,.row4{
+            background-color: white;
+        }
+
+        .column1,.column2 {
+            background-color: gray;
+        }
+
+        tr.yeniRow td {
+            background-color: green;
+        }
+        .buton{
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        let sayac = 5;
+
+        function addRow() {
+            let table = document.getElementById("Table");
+            let row = table.insertRow(-1);
+
+            row.classList.add("yeniRow");
+
+            let hücre1 = row.insertCell(0);
+            let hücre2 = row.insertCell(1);
+            hücre1.classList.add("column1");
+            hücre2.classList.add("column2");
+
+            hücre1.innerHTML = "Satir" + sayac + " Sutun1";
+            hücre2.innerHTML = "Satir" + sayac + " Sutun2";
+
+            sayac++;
+        }
+
+        function deleteRow() {
+            let table = document.getElementById("Table");
+            if (table.rows.length > 1) {
+                table.deleteRow(-1);
+                sayac--;
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <table id="Table">
+        <tr class="row1">
+            <td class="column1">Satir1 Sutun1</td>
+            <td class="column2">Satir1 Sutun2</td>
+        </tr>
+        <tr class="row2">
+            <td class="column1">Satir2 Sutun1</td>
+            <td class="column2">Satir2 Sutun2</td>
+        </tr>
+        <tr class="row3">
+            <td class="column1">Satir3 Sutun1</td>
+            <td class="column2">Satir3 Sutun2</td>
+        </tr>
+        <tr class="row4">
+            <td class="column1">Satir4 Sutun1</td>
+            <td class="column2">Satir4 Sutun2</td>
+        </tr>
+      
+    </table>
+
+    <button class="buton" onclick="addRow()">Satır Ekle</button>
+    <button class="buton" onclick="deleteRow()">Satır Sil</button>
+
+</body>
+
+</html>
